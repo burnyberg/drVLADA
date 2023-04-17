@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Праздничный сайт для друга</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0e68c;
+            color: #4b0082;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        #greeting {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>С днем рождения, друг!</h1>
+    <div id="greeting"></div>
+
+    <script>
+        const greetings = [
+            'Поздравляем с 19-летием и успехов в освоении программирования!',
+            'Желаем тебе победить всех соперников в CS:GO!',
+            'Пусть твоя клавиатура будет тебе верным инструментом в программировании и играх!',
+            'От всей души желаем тебе и Алене счастья и гармонии!',
+            'Пусть Максик радует тебя своими котикусами и всегда будет рядом!',
+            'Желаем тебе купить айфон и получить еще больше возможностей!',
+            'От Стаса, Ильи, Данила, Даниила, Эдика и Леры передают поздравления и желают всего наилучшего!',
+        ];
+
+        function showGreeting() {
+            const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+            document.getElementById('greeting').innerText = randomGreeting;
+        }
+
+        showGreeting();
+    </script>
+</body>
+</html>
